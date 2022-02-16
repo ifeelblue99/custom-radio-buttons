@@ -1,0 +1,80 @@
+.radio-btn-holder {
+  display: flex;
+  gap: 0.8rem;
+}
+
+/**/
+#pink-radio-btn {
+  appearance: none;
+  margin: 0;
+  color: pink;
+  font: inherit;
+  background-color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+#orange-radio-btn {
+  appearance: none;
+  margin: 0;
+  background-color: orange;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+#blue-radio-btn {
+  appearance: none;
+  margin: 0;
+  background-color: green;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+#soft-blu-radio-btn {
+  appearance: none;
+  margin: 0;
+  background-color: steelblue;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+/**/
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: white;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+#pink-radio-btn:checked {
+  outline: max(2px, 0.15em) solid pink;
+  outline-offset: max(2px, 0.15em);
+}
+#orange-radio-btn:checked {
+  outline: max(2px, 0.15em) solid orange;
+  outline-offset: max(2px, 0.15em);
+}
+#blue-radio-btn:checked {
+  outline: max(2px, 0.15em) solid green;
+  outline-offset: max(2px, 0.15em);
+}
+#soft-blu-radio-btn:checked {
+  outline: max(2px, 0.15em) solid steelblue;
+  outline-offset: max(2px, 0.15em);
+}
